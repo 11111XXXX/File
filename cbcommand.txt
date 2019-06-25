@@ -1,0 +1,18 @@
+Scaffold-DbContext "Server=DL-LT-20;Database=IP_Projects;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity -t User, Role -f
+
+
+
+Scaffold-DbContext "Server=DL-LT-20;Database=IP_Projects;User Id=sa;Password=sql@123" -Project Osh.IP.ProjectModule.Repository Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity/  -Context InvPlatProjectContext -force
+
+Scaffold-DbContext "Server=DL-LT-16;Database=IP_Projects;User Id=sa;Password=sql@123" -Project Osh.IP.ProjectModule.Repository Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity/ -Context InvPlatProjectContext -force
+
+
+Scaffold-DbContext "Server=DL-LT-20;Database=EmaployeeDB;User Id=sa;Password=sql@123" -project employee_RegisterRepository Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity/ -Context EmployeeContext -force
+
+
+
+
+Scaffold-DbContext "Server=DL-LT-20;Database=ContactDB_WarunaSamapth;User Id=sa;Password=sql@123" -project ContactInfoRepository Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entity/ -Context ContactInfoDatabaseContext -force
+
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
